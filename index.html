@@ -1221,10 +1221,72 @@ footer { background: var(--primary); padding: 64px 40px 32px; }
   padding: 18px;
 }
 
+/* ─── COOKIE BANNER ─────────────────────── */
+#cookie-banner {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 9998;
+  background: #0F172A;
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding: 20px 40px;
+  box-shadow: 0 -8px 40px rgba(0,0,0,.35);
+  transform: translateY(100%);
+  transition: transform .4s cubic-bezier(.22,1,.36,1);
+}
+#cookie-banner.show { transform: translateY(0); }
+.cb-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
+}
+.cb-text { flex: 1; min-width: 260px; }
+.cb-text p {
+  font-size: .82rem; color: rgba(255,255,255,.6); line-height: 1.7; margin: 0;
+}
+.cb-text a { color: #F97316; text-decoration: underline; }
+.cb-text a:hover { color: #EA6C0B; }
+.cb-actions { display: flex; gap: 10px; flex-shrink: 0; flex-wrap: wrap; }
+.cb-btn-accept {
+  background: #F97316; color: #fff;
+  border: none; border-radius: 8px;
+  padding: 11px 24px;
+  font-family: 'Poppins', sans-serif; font-size: .8rem; font-weight: 700;
+  cursor: pointer; white-space: nowrap;
+  transition: background .2s, transform .2s;
+}
+.cb-btn-accept:hover { background: #EA6C0B; transform: translateY(-1px); }
+.cb-btn-decline {
+  background: rgba(255,255,255,.07);
+  border: 1.5px solid rgba(255,255,255,.15);
+  color: rgba(255,255,255,.7); border-radius: 8px;
+  padding: 10px 20px;
+  font-family: 'Poppins', sans-serif; font-size: .8rem; font-weight: 600;
+  cursor: pointer; white-space: nowrap;
+  transition: background .2s, border-color .2s;
+}
+.cb-btn-decline:hover { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.3); }
+@media (max-width: 600px) {
+  #cookie-banner { padding: 18px 20px; }
+  .cb-actions { width: 100%; }
+  .cb-btn-accept, .cb-btn-decline { flex: 1; text-align: center; }
+}
 </style>
 </head>
 <body>
-
+<!-- ══════════════════════════════════════
+     COOKIE BANNER (DSGVO-konform)
+══════════════════════════════════════ -->
+<div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie-Einstellungen">
+  <div class="cb-inner">
+    <div class="cb-text">
+      <p>
+        🍪 Diese Website verwendet keine Tracking-Cookies. Wir nutzen ausschließlich technisch notwendige Cookies sowie Google Fonts und Netlify Forms zur Funktionalität.
+        Weitere Infos in unserer <button onclick="openLegal('datenschutz')" style="background:none;border:none;padding:0;color:#F97316;text-decoration:underline;cursor:pointer;font-size:inherit">Datenschutzerklärung</button>.
+      </p>
+    </div>
+    <div class="cb-actions">
+      <button class="cb-btn-accept" id="cb-accept" aria-label="Cookies akzeptieren">Verstanden</button>
+      <button class="cb-btn-decline" id="cb-decline" aria-label="Nur notwendige Cookies">Nur notwendige</button>
+    </div>
+  </div>
+</div>
 <!-- ══════════════════════════════════════
      NAVBAR
 ══════════════════════════════════════ -->
@@ -2077,6 +2139,28 @@ footer { background: var(--primary); padding: 64px 40px 32px; }
 </div>
 
 <script>
+
+/* ── Cookie Banner ── */
+(function() {
+  const banner  = document.getElementById('cookie-banner');
+  const accept  = document.getElementById('cb-accept');
+  const decline = document.getElementById('cb-decline');
+  const COOKIE_KEY = 'bu_cookie_consent';
+
+  // Banner nur zeigen wenn noch keine Entscheidung getroffen
+  if (!localStorage.getItem(COOKIE_KEY)) {
+    setTimeout(() => banner.classList.add('show'), 800);
+  }
+
+  function dismissBanner(choice) {
+    banner.classList.remove('show');
+    localStorage.setItem(COOKIE_KEY, choice); // 'accepted' oder 'declined'
+  }
+
+  accept.addEventListener('click',  () => dismissBanner('accepted'));
+  decline.addEventListener('click', () => dismissBanner('declined'));
+})();
+
 /* ── Sticky navbar ── */
 const navbar = document.getElementById('navbar');
 const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 40);
