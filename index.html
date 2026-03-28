@@ -260,20 +260,17 @@
 }
 </script>
 
-<!-- Fonts — Preconnect für Performance -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Schriftarten: system-ui — DSGVO-konform, kein externer Server, sofort sichtbar -->
 <style>
 
 /* ─── RESET ─────────────────────────────── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
-body { font-family: 'Inter', sans-serif; background: #F8FAFC; color: #0F172A; overflow-x: hidden; }
+body { font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; background: #F8FAFC; color: #0F172A; overflow-x: hidden; }
 a { text-decoration: none; color: inherit; }
 img { display: block; max-width: 100%; object-fit: cover; }
 ul { list-style: none; }
-button, input, textarea, select { font-family: 'Inter', sans-serif; }
+button, input, textarea, select { font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
 
 /* ─── DESIGN TOKENS ─────────────────────── */
 :root {
@@ -357,7 +354,7 @@ button, input, textarea, select { font-family: 'Inter', sans-serif; }
 .nav-brand-mark svg { width: 19px; height: 19px; fill: #fff; }
 .nav-brand-text { display: flex; flex-direction: column; }
 .nav-brand-name {
-  font-family: 'Poppins', sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: .9rem; font-weight: 700; color: #fff; line-height: 1.1;
 }
 .nav-brand-sub {
@@ -367,7 +364,7 @@ button, input, textarea, select { font-family: 'Inter', sans-serif; }
 /* Links */
 .nav-links { display: flex; align-items: center; gap: 28px; }
 .nav-links a {
-  font-family: 'Poppins', sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: .72rem; font-weight: 600;
   letter-spacing: .06em; text-transform: uppercase;
   color: rgba(255,255,255,.65);
@@ -387,7 +384,7 @@ button, input, textarea, select { font-family: 'Inter', sans-serif; }
   display: flex; align-items: center; gap: 7px;
   background: var(--accent); color: #fff;
   padding: 10px 20px; border-radius: var(--r-sm);
-  font-family: 'Poppins', sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: .75rem; font-weight: 700; letter-spacing: .04em;
   box-shadow: 0 2px 12px var(--accent-glow);
   transition: background .2s, transform .25s var(--ease), box-shadow .25s;
@@ -426,7 +423,7 @@ button, input, textarea, select { font-family: 'Inter', sans-serif; }
 }
 #mob-nav.open { opacity: 1; pointer-events: all; transform: none; }
 .mob-link {
-  font-family: 'Poppins', sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: 1.25rem; font-weight: 700;
   color: rgba(255,255,255,.75);
   padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,.06);
@@ -439,7 +436,7 @@ button, input, textarea, select { font-family: 'Inter', sans-serif; }
   display: flex; align-items: center; gap: 12px;
   background: var(--accent); color: #fff;
   padding: 18px 22px; border-radius: var(--r-lg);
-  font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 800;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 1rem; font-weight: 800;
   margin-top: 24px; transition: background .2s;
 }
 .mob-call:active { background: var(--accent-d); }
@@ -448,7 +445,7 @@ button, input, textarea, select { font-family: 'Inter', sans-serif; }
   display: flex; align-items: center; gap: 12px;
   background: rgba(255,255,255,.06); border: 1.5px solid rgba(255,255,255,.12);
   color: #fff; padding: 15px 22px; border-radius: var(--r-lg);
-  font-family: 'Poppins', sans-serif; font-size: .9rem; font-weight: 700;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .9rem; font-weight: 700;
   margin-top: 10px;
 }
 .mob-appt svg { width: 18px; height: 18px; stroke: #fff; fill: none; stroke-width: 2.5; }
@@ -494,7 +491,7 @@ button, input, textarea, select { font-family: 'Inter', sans-serif; }
   border: 1px solid rgba(249,115,22,.35);
   color: var(--accent);
   padding: 6px 14px; border-radius: 4px;
-  font-family: 'Poppins', sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: .65rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
   margin-bottom: 24px;
 }
@@ -506,7 +503,7 @@ button, input, textarea, select { font-family: 'Inter', sans-serif; }
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
 
 h1.hero-h1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: clamp(2.1rem, 5.5vw, 4.2rem);
   font-weight: 800; line-height: 1.1; letter-spacing: -.03em;
   color: #fff; margin-bottom: 20px; max-width: 700px;
@@ -525,7 +522,7 @@ h1.hero-h1 span { color: var(--accent); }
   display: inline-flex; align-items: center; gap: 9px;
   background: var(--accent); color: #fff;
   padding: 15px 28px; border-radius: var(--r-sm);
-  font-family: 'Poppins', sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: .85rem; font-weight: 700; letter-spacing: .03em;
   box-shadow: 0 4px 20px var(--accent-glow);
   transition: background .2s, transform .3s var(--ease), box-shadow .3s;
@@ -542,7 +539,7 @@ h1.hero-h1 span { color: var(--accent); }
   display: inline-flex; align-items: center; gap: 9px;
   border: 2px solid rgba(255,255,255,.25); color: rgba(255,255,255,.9);
   padding: 13px 24px; border-radius: var(--r-sm);
-  font-family: 'Poppins', sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: .85rem; font-weight: 700;
   transition: border-color .2s, background .2s, transform .3s var(--ease);
 }
@@ -581,7 +578,7 @@ h1.hero-h1 span { color: var(--accent); }
 }
 .hero-card-num {
   display: flex; align-items: center; gap: 8px;
-  font-family: 'Poppins', sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: 1.15rem; font-weight: 800; color: var(--primary);
 }
 .hero-card-num svg { width: 16px; height: 16px; stroke: var(--accent); fill: none; stroke-width: 2.5; }
@@ -637,7 +634,7 @@ h1.hero-h1 span { color: var(--accent); }
 }
 .tb-icon svg { width: 20px; height: 20px; stroke: var(--accent); fill: none; stroke-width: 1.8; }
 .tb-n {
-  font-family: 'Poppins', sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: 1.05rem; font-weight: 700; color: #fff;
 }
 .tb-l { font-size: .68rem; font-weight: 500; color: rgba(255,255,255,.4); margin-top: 2px; }
@@ -647,13 +644,13 @@ h1.hero-h1 span { color: var(--accent); }
 .sec-w { max-width: 1200px; margin: 0 auto; }
 .eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
-  font-family: 'Poppins', sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: .65rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
   color: var(--accent); margin-bottom: 12px;
 }
 .eyebrow::before { content: ''; width: 22px; height: 2px; background: var(--accent); border-radius: 2px; flex-shrink: 0; }
 h2.sec-h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: clamp(1.75rem, 3.5vw, 2.6rem);
   font-weight: 800; color: var(--primary);
   letter-spacing: -.03em; line-height: 1.15; margin-bottom: 12px;
@@ -697,7 +694,7 @@ h2.sec-h2 {
 }
 .srv-card:hover .srv-icon svg { stroke: #fff; }
 h3.srv-h {
-  font-family: 'Poppins', sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 10px;
 }
 .srv-p { font-size: .87rem; font-weight: 400; line-height: 1.75; color: var(--text-s); }
@@ -714,7 +711,7 @@ h3.srv-h {
   border-radius: var(--r-md); padding: 14px 18px;
   box-shadow: 0 8px 24px rgba(249,115,22,.4);
 }
-.why-badge-n { font-family: 'Poppins', sans-serif; font-size: 1.4rem; font-weight: 800; line-height: 1; }
+.why-badge-n { font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 1.4rem; font-weight: 800; line-height: 1; }
 .why-badge-l { font-size: .68rem; font-weight: 600; opacity: .9; margin-top: 3px; }
 .why-points { display: flex; flex-direction: column; gap: 22px; }
 .why-pt { display: flex; gap: 16px; align-items: flex-start; }
@@ -723,10 +720,10 @@ h3.srv-h {
   border-radius: var(--r-sm);
   background: rgba(249,115,22,.08); border: 1px solid rgba(249,115,22,.2);
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Poppins', sans-serif; font-size: .82rem; font-weight: 800; color: var(--accent);
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .82rem; font-weight: 800; color: var(--accent);
   margin-top: 2px;
 }
-h3.why-pt-h { font-family: 'Poppins', sans-serif; font-size: .95rem; font-weight: 700; color: var(--primary); margin-bottom: 5px; }
+h3.why-pt-h { font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .95rem; font-weight: 700; color: var(--primary); margin-bottom: 5px; }
 .why-pt-p { font-size: .85rem; font-weight: 400; line-height: 1.75; color: var(--text-s); }
 
 /* ─── OFFERS / PRICING ──────────────────── */
@@ -743,13 +740,13 @@ h3.why-pt-h { font-family: 'Poppins', sans-serif; font-size: .95rem; font-weight
 }
 .o-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--border); }
 .o-card.featured:hover { box-shadow: 0 28px 72px rgba(15,23,42,.35); }
-.o-tag-label { font-family: 'Poppins', sans-serif; font-size: .62rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; display: block; }
-.o-price { font-family: 'Poppins', sans-serif; font-size: 3rem; font-weight: 800; color: var(--primary); line-height: 1; }
+.o-tag-label { font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .62rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; display: block; }
+.o-price { font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 3rem; font-weight: 800; color: var(--primary); line-height: 1; }
 .o-card.featured .o-price { color: #fff; }
 .o-price sup { font-size: 1.1rem; vertical-align: super; margin-right: 2px; }
 .o-price sub { font-size: .78rem; font-weight: 500; color: var(--text-xs); }
 .o-card.featured .o-price sub { color: rgba(255,255,255,.4); }
-h3.o-name { font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 700; color: var(--primary); margin: 16px 0 10px; }
+h3.o-name { font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 1rem; font-weight: 700; color: var(--primary); margin: 16px 0 10px; }
 .o-card.featured h3.o-name { color: #fff; }
 .o-desc { font-size: .84rem; line-height: 1.75; color: var(--text-s); }
 .o-card.featured .o-desc { color: rgba(255,255,255,.55); }
@@ -768,7 +765,7 @@ h3.o-name { font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 70
 #reviews { background: var(--bg-card); }
 .rev-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 48px; flex-wrap: wrap; gap: 20px; }
 .rev-score { display: flex; align-items: center; gap: 20px; }
-.rev-big-n { font-family: 'Poppins', sans-serif; font-size: 4.5rem; font-weight: 800; color: var(--primary); line-height: 1; }
+.rev-big-n { font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 4.5rem; font-weight: 800; color: var(--primary); line-height: 1; }
 .rev-stars-row { display: flex; gap: 3px; }
 .rev-stars-row svg { width: 19px; height: 19px; fill: #F59E0B; }
 .rev-count { font-size: .75rem; color: var(--text-xs); margin-top: 5px; }
@@ -796,9 +793,9 @@ h3.o-name { font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 70
   width: 36px; height: 36px; border-radius: 50%;
   background: var(--secondary);
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Poppins', sans-serif; font-size: .85rem; font-weight: 700; color: #fff; flex-shrink: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .85rem; font-weight: 700; color: #fff; flex-shrink: 0;
 }
-.rev-name { font-family: 'Poppins', sans-serif; font-size: .82rem; font-weight: 700; color: var(--primary); }
+.rev-name { font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .82rem; font-weight: 700; color: var(--primary); }
 .rev-date { font-size: .7rem; color: var(--text-xs); margin-top: 1px; }
 
 /* ─── TÜV ───────────────────────────────── */
@@ -811,8 +808,8 @@ h3.o-name { font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 70
   transition: background .2s;
 }
 .tuev-row:hover { background: var(--bg-card); }
-.tuev-day { font-family: 'Poppins', sans-serif; font-size: .9rem; font-weight: 600; color: var(--primary); }
-.tuev-time { font-family: 'Poppins', sans-serif; font-size: .9rem; font-weight: 700; color: var(--accent); }
+.tuev-day { font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .9rem; font-weight: 600; color: var(--primary); }
+.tuev-time { font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .9rem; font-weight: 700; color: var(--accent); }
 .tuev-divider { height: 1px; background: var(--border-l); margin: 2px 16px; }
 .tuev-note {
   background: rgba(30,58,138,.05); border-left: 3px solid var(--secondary);
@@ -828,7 +825,7 @@ h3.o-name { font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 70
   position: absolute; top: 22px; left: 22px;
   background: var(--accent); color: #fff;
   border-radius: 6px; padding: 8px 14px;
-  font-family: 'Poppins', sans-serif; font-size: .72rem; font-weight: 700;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .72rem; font-weight: 700;
   letter-spacing: .05em; text-transform: uppercase;
   box-shadow: 0 4px 14px var(--accent-glow);
 }
@@ -849,25 +846,25 @@ h3.o-name { font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 70
   display: flex; align-items: center; justify-content: center;
 }
 .team-initials {
-  font-family: 'Poppins', sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: 1.8rem; font-weight: 800; color: rgba(255,255,255,.22);
 }
 .team-body { padding: 16px 14px 20px; }
-.team-name { font-family: 'Poppins', sans-serif; font-size: .85rem; font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+.team-name { font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .85rem; font-weight: 700; color: var(--primary); margin-bottom: 4px; }
 .team-role { font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
 
 /* ─── FAQ ───────────────────────────────── */
 #faq { background: var(--bg); }
 .faq-layout { display: grid; grid-template-columns: 1fr 3fr; gap: 72px; align-items: start; }
 .faq-aside { position: sticky; top: 86px; }
-.faq-aside-h { font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 800; color: var(--primary); margin-bottom: 12px; }
+.faq-aside-h { font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 1rem; font-weight: 800; color: var(--primary); margin-bottom: 12px; }
 .faq-aside-p { font-size: .83rem; color: var(--text-s); line-height: 1.75; margin-bottom: 20px; }
 .faq-call-box {
   background: var(--primary); border-radius: var(--r-lg); padding: 22px 20px;
 }
 .faq-call-lbl { font-size: .6rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(249,115,22,.75); margin-bottom: 8px; }
 .faq-call-num {
-  display: block; font-family: 'Poppins', sans-serif;
+  display: block; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: 1.1rem; font-weight: 800; color: #fff;
   margin-bottom: 5px; transition: color .2s;
 }
@@ -881,7 +878,7 @@ h3.o-name { font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 70
   text-align: left; cursor: pointer;
 }
 .faq-q-txt {
-  font-family: 'Poppins', sans-serif; font-size: .93rem; font-weight: 700;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .93rem; font-weight: 700;
   color: var(--primary); transition: color .2s;
 }
 .faq-item.open .faq-q-txt { color: var(--accent); }
@@ -908,12 +905,12 @@ h3.o-name { font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 70
 }
 .loc-eyebrow {
   display: flex; align-items: center; gap: 10px;
-  font-family: 'Poppins', sans-serif; font-size: .65rem; font-weight: 700;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .65rem; font-weight: 700;
   letter-spacing: .16em; text-transform: uppercase;
   color: rgba(249,115,22,.75); margin-bottom: 16px;
 }
 .loc-eyebrow::before { content: ''; width: 20px; height: 2px; background: rgba(249,115,22,.6); border-radius: 2px; }
-h2.loc-h { font-family: 'Poppins', sans-serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 800; color: #fff; margin-bottom: 28px; line-height: 1.2; }
+h2.loc-h { font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 800; color: #fff; margin-bottom: 28px; line-height: 1.2; }
 .loc-rows { display: flex; flex-direction: column; gap: 16px; margin-bottom: 36px; }
 .loc-row { display: flex; gap: 14px; align-items: flex-start; }
 .loc-icon {
@@ -935,7 +932,7 @@ h2.loc-h { font-family: 'Poppins', sans-serif; font-size: clamp(1.6rem, 2.5vw, 2
   display: inline-flex; align-items: center; gap: 9px;
   background: var(--accent); color: #fff;
   padding: 12px 22px; border-radius: var(--r-sm);
-  font-family: 'Poppins', sans-serif; font-size: .8rem; font-weight: 700;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .8rem; font-weight: 700;
   align-self: flex-start;
   box-shadow: 0 4px 16px var(--accent-glow);
   transition: background .2s, transform .3s var(--ease), box-shadow .3s;
@@ -986,7 +983,7 @@ h2.loc-h { font-family: 'Poppins', sans-serif; font-size: clamp(1.6rem, 2.5vw, 2
   box-shadow: var(--shadow-md);
 }
 .form-card-h {
-  font-family: 'Poppins', sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: 1.45rem; font-weight: 800; color: var(--primary); margin-bottom: 6px;
 }
 .form-card-sub { font-size: .87rem; color: var(--text-s); line-height: 1.75; margin-bottom: 32px; }
@@ -1021,7 +1018,7 @@ input[type="date"].form-input:invalid { color: var(--border); }
   width: 100%; margin-top: 6px;
   background: var(--accent); color: #fff;
   padding: 16px 28px; border-radius: var(--r-md);
-  font-family: 'Poppins', sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: .9rem; font-weight: 700; letter-spacing: .04em;
   border: none; cursor: pointer;
   display: flex; align-items: center; justify-content: center; gap: 10px;
@@ -1052,7 +1049,7 @@ input[type="date"].form-input:invalid { color: var(--border); }
   display: flex; align-items: center; justify-content: center;
 }
 .form-success-icon svg { width: 24px; height: 24px; stroke: #fff; fill: none; stroke-width: 2.5; }
-.form-success h3 { font-family: 'Poppins', sans-serif; font-size: 1.1rem; font-weight: 700; color: #15803D; margin-bottom: 8px; }
+.form-success h3 { font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 1.1rem; font-weight: 700; color: #15803D; margin-bottom: 8px; }
 .form-success p { font-size: .87rem; color: #166534; line-height: 1.7; }
 
 /* ─── STICKY CALL (Mobile) ──────────────── */
@@ -1064,7 +1061,7 @@ input[type="date"].form-input:invalid { color: var(--border); }
   display: flex; align-items: center; gap: 10px;
   background: var(--accent); color: #fff;
   padding: 15px 28px; border-radius: 50px;
-  font-family: 'Poppins', sans-serif; font-size: .9rem; font-weight: 800;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .9rem; font-weight: 800;
   box-shadow: 0 8px 28px rgba(249,115,22,.5);
   white-space: nowrap;
 }
@@ -1081,9 +1078,9 @@ footer { background: var(--primary); padding: 64px 40px 32px; }
 .ft-brand-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
 .ft-brand-mark { width: 34px; height: 34px; background: var(--accent); border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center; }
 .ft-brand-mark svg { width: 18px; height: 18px; fill: #fff; }
-.ft-brand-name { font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 800; color: #fff; }
+.ft-brand-name { font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 1rem; font-weight: 800; color: #fff; }
 .ft-desc { font-size: .8rem; color: rgba(255,255,255,.3); line-height: 1.85; max-width: 230px; }
-.ft-col-h { font-family: 'Poppins', sans-serif; font-size: .62rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.2); margin-bottom: 16px; }
+.ft-col-h { font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .62rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.2); margin-bottom: 16px; }
 .ft-col { display: flex; flex-direction: column; gap: 10px; }
 .ft-link { font-size: .83rem; color: rgba(255,255,255,.4); transition: color .2s; }
 .ft-link:hover { color: rgba(255,255,255,.85); }
@@ -1151,7 +1148,7 @@ footer { background: var(--primary); padding: 64px 40px 32px; }
 /* ── SEO: Inline CTA-Links in Service-Karten ── */
 .srv-cta-link {
   display: inline-block; margin-top: 10px;
-  font-family: 'Poppins', sans-serif; font-size: .78rem; font-weight: 700;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .78rem; font-weight: 700;
   color: var(--accent); transition: color .2s;
 }
 .srv-cta-link:hover { color: var(--accent-d); text-decoration: underline; }
@@ -1163,11 +1160,11 @@ footer { background: var(--primary); padding: 64px 40px 32px; }
 .legal-page { display: none; position: fixed; inset: 0; z-index: 9999; overflow-y: auto; background: var(--bg); padding: 80px 40px 60px; }
 .legal-page.active { display: block; }
 .legal-inner { max-width: 760px; margin: 0 auto; }
-.legal-back { display: inline-flex; align-items: center; gap: 8px; font-family: 'Poppins', sans-serif; font-size: .82rem; font-weight: 700; color: var(--accent); margin-bottom: 36px; cursor: pointer; border: none; background: none; padding: 0; }
+.legal-back { display: inline-flex; align-items: center; gap: 8px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .82rem; font-weight: 700; color: var(--accent); margin-bottom: 36px; cursor: pointer; border: none; background: none; padding: 0; }
 .legal-back:hover { text-decoration: underline; }
 .legal-back svg { width: 14px; height: 14px; stroke: var(--accent); fill: none; stroke-width: 2.5; }
-.legal-page h1 { font-family: 'Poppins', sans-serif; font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 32px; }
-.legal-page h2 { font-family: 'Poppins', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--primary); margin: 32px 0 10px; }
+.legal-page h1 { font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 32px; }
+.legal-page h2 { font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--primary); margin: 32px 0 10px; }
 .legal-page p { font-size: .9rem; line-height: 1.85; color: var(--text-s); margin-bottom: 14px; }
 .legal-page a { color: var(--accent); }
 .legal-page a:hover { text-decoration: underline; }
@@ -1247,7 +1244,7 @@ footer { background: var(--primary); padding: 64px 40px 32px; }
   background: #F97316; color: #fff;
   border: none; border-radius: 8px;
   padding: 11px 24px;
-  font-family: 'Poppins', sans-serif; font-size: .8rem; font-weight: 700;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .8rem; font-weight: 700;
   cursor: pointer; white-space: nowrap;
   transition: background .2s, transform .2s;
 }
@@ -1257,7 +1254,7 @@ footer { background: var(--primary); padding: 64px 40px 32px; }
   border: 1.5px solid rgba(255,255,255,.15);
   color: rgba(255,255,255,.7); border-radius: 8px;
   padding: 10px 20px;
-  font-family: 'Poppins', sans-serif; font-size: .8rem; font-weight: 600;
+  font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .8rem; font-weight: 600;
   cursor: pointer; white-space: nowrap;
   transition: background .2s, border-color .2s;
 }
@@ -1868,7 +1865,7 @@ footer { background: var(--primary); padding: 64px 40px 32px; }
             <div class="ci-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
             <div>
               <div class="ci-lbl">E-Mail</div>
-              <div class="ci-val"><a href="mailto:info@boese-unru.de" class="ft-link">info@boese-unru.de</a></div>
+              <div class="ci-val"><a href="mailto:info@boese-unru.de">info@boese-unru.de</a></div>
             </div>
           </div>
           <div class="ci-item">
@@ -2029,7 +2026,7 @@ footer { background: var(--primary); padding: 64px 40px 32px; }
         <nav class="ft-col" aria-label="Kontakt Footer">
           <a href="tel:+4952529308660" class="ft-link">05252 – 930 866</a>
           <a href="tel:+491717707804"  class="ft-link">0171 – 770 7804</a>
-          <a href="mailto:info@boese-unru.de" class="ft-link">info@boese-unru.de</a>
+          <a href="mailto:info@boese-unru.de">info@boese-unru.de</a>
           <a href="https://maps.google.com/?q=Hohe+Kamp+26+33175+Bad+Lippspringe" target="_blank" rel="noopener noreferrer" class="ft-link">Google Maps →</a>
         </nav>
       </div>
@@ -2098,20 +2095,32 @@ footer { background: var(--primary); padding: 64px 40px 32px; }
   <div class="legal-inner">
     <button class="legal-back" onclick="closeLegal()"><svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>Zurück zur Website</button>
     <h1>Datenschutzerklärung</h1>
-    <h2>1. Verantwortliche Stelle</h2>
-    <p>Autohandel Andreas Böse Peter Unru &amp; Unru GbR, Hohe Kamp 26, 33175 Bad Lippspringe<br>Tel.: <a href="tel:+4952529308660">05252 – 930 866</a> · E-Mail: <a href="mailto:info@boese-unru.de">info@boese-unru.de</a></p>
-    <h2>2. Datenerfassung auf dieser Website</h2>
-    <h2>Kontaktformular</h2>
-    <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben zwecks Bearbeitung der Anfrage bei uns gespeichert. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
-    <h2>Netlify Forms</h2>
-    <p>Diese Website nutzt Netlify Forms (Netlify, Inc., 44 Montgomery Street, Suite 300, San Francisco, CA 94104, USA) zur Verarbeitung von Kontaktanfragen. Datenschutzerklärung: <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener noreferrer">www.netlify.com/privacy</a>.</p>
-    <h2>Server-Log-Dateien</h2>
-    <p>Der Hosting-Provider erhebt automatisch Server-Log-Dateien (Browsertyp, Betriebssystem, Referrer, IP-Adresse, Zeitstempel). Diese Daten werden nicht mit anderen Quellen zusammengeführt.</p>
-    <h2>Google Fonts</h2>
-    <p>Diese Seite nutzt Google Fonts zur Darstellung von Schriftarten. Bei Aufruf der Seite lädt Ihr Browser die benötigten Fonts aus dem Google-Cache. Datenschutzerklärung Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.</p>
-    <h2>3. Ihre Rechte (DSGVO)</h2>
-    <p>Sie haben das Recht auf: Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Zuständige Aufsichtsbehörde: Landesbeauftragte für Datenschutz und Informationsfreiheit NRW, <a href="https://www.ldi.nrw.de" target="_blank" rel="noopener noreferrer">www.ldi.nrw.de</a>.</p>
-  </div>
+    <p style="font-size:.82rem;color:#64748B">Stand: März 2025 · Autohandel Andreas Böse Peter Unru &amp; Unru GbR</p>
+
+    <h2>1. Verantwortliche Stelle (Art. 4 Nr. 7 DSGVO)</h2>
+    <p>Autohandel Andreas Böse Peter Unru &amp; Unru GbR<br>Hohe Kamp 26, 33175 Bad Lippspringe<br>Telefon: <a href="tel:+4952529308660">05252 – 930 866</a><br>E-Mail: <a href="mailto:info@boese-unru.de">info@boese-unru.de</a></p>
+
+    <h2>2. Hosting – Netlify (USA)</h2>
+    <p>Diese Website wird betrieben von <strong>Netlify, Inc.</strong>, 44 Montgomery Street, Suite 300, San Francisco, CA 94104, USA. Beim Aufruf der Website werden automatisch Verbindungsdaten (IP-Adresse, Browsertyp, Datum/Uhrzeit) an Netlify-Server übertragen. Die Übermittlung in die USA erfolgt auf Grundlage von <strong>Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO)</strong>. Mit Netlify besteht ein Auftragsverarbeitungsvertrag (AVV) gem. Art. 28 DSGVO. <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO. Weitere Infos: <a href="https://www.netlify.com/gdpr-ccpa/" target="_blank" rel="noopener noreferrer">netlify.com/gdpr-ccpa</a></p>
+
+    <h2>3. Kontaktformular &amp; Netlify Forms</h2>
+    <p>Formularangaben (Name, E-Mail, Telefon, Nachricht) werden über <strong>Netlify Forms</strong> (Netlify, Inc., USA) verarbeitet und an Netlify-Server übertragen. Übertragung in die USA per Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO). Daten werden nach Abschluss der Kommunikation gelöscht, soweit keine gesetzlichen Aufbewahrungspflichten bestehen. <strong>Rechtsgrundlagen:</strong> Art. 6 Abs. 1 lit. b und lit. f DSGVO. Datenschutzerklärung Netlify: <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener noreferrer">netlify.com/privacy</a></p>
+
+    <h2>4. Schriftarten (lokal/System)</h2>
+    <p>Diese Website verwendet ausschließlich <strong>systemseitig vorinstallierte Schriftarten</strong> (system-ui). Es wird keine Verbindung zu Google-Servern oder anderen externen Anbietern hergestellt. Es werden keine personenbezogenen Daten an Dritte übertragen.</p>
+
+    <h2>5. Externe Bilder (Unsplash)</h2>
+    <p>Hintergrundbilder werden von <strong>Unsplash</strong> (Unsplash Inc., Montreal, Kanada) geladen. Dabei kann Ihre IP-Adresse übertragen werden. <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO. Datenschutzerklärung: <a href="https://unsplash.com/privacy" target="_blank" rel="noopener noreferrer">unsplash.com/privacy</a></p>
+
+    <h2>6. Google Maps (nur externer Link – kein Embed)</h2>
+    <p>Diese Website enthält reine <strong>Hyperlinks</strong> zu Google Maps. Google Maps ist <strong>nicht eingebettet</strong> – beim Laden der Seite werden keinerlei Daten an Google übertragen. Erst beim aktiven Klick verlassen Sie unsere Website. Ab diesem Zeitpunkt gilt die Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></p>
+
+    <h2>7. Cookies &amp; lokaler Speicher</h2>
+    <p>Diese Website setzt <strong>keine Tracking-, Marketing- oder Analyse-Cookies</strong>. Es wird lediglich ein localStorage-Eintrag (<code>bu_cookie_consent</code>) gespeichert, um Ihre Entscheidung im Cookie-Banner zu merken. <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO.</p>
+
+    <h2>8. Ihre Rechte (Art. 15–21 DSGVO)</h2>
+    <p>Sie haben das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Anfragen richten Sie bitte an: <a href="mailto:info@boese-unru.de">info@boese-unru.de</a></p>
+    <p><strong>Zuständige Aufsichtsbehörde:</strong> Landesbeauftragte für Datenschutz und Informationsfreiheit NRW, Kavalleriestraße 2–4, 40213 Düsseldorf, <a href="https://www.ldi.nrw.de" target="_blank" rel="noopener noreferrer">www.ldi.nrw.de</a></p></div>
 </div>
 
 <div id="page-agb" class="legal-page" role="dialog" aria-modal="true" aria-label="AGB">
@@ -2251,10 +2260,17 @@ if (netlifyForm) {
     let valid = true;
     required.forEach(f => { if (!f.value.trim()) { f.style.borderColor='#EF4444'; valid=false; } else f.style.borderColor=''; });
     if (!valid) return;
+
     formSubmitBtn.disabled = true;
     formSubmitBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation:spin .8s linear infinite"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" opacity=".25"/><path d="M21 12a9 9 0 00-9-9"/></svg> Wird gesendet…';
+
     try {
-      await fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body: new URLSearchParams(new FormData(netlifyForm)).toString()});
+      const encoded = new URLSearchParams(new FormData(netlifyForm)).toString();
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encoded,
+      });
       netlifyForm.style.display = 'none';
       formSuccess.classList.add('show');
     } catch(err) {
@@ -2265,6 +2281,7 @@ if (netlifyForm) {
   });
   netlifyForm.querySelectorAll('.form-input').forEach(i => i.addEventListener('input', () => i.style.borderColor=''));
 }
+
 </script>
 </body>
 </html>
