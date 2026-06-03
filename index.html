@@ -4,14 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DYG7EC9XKM"></script>
+<!-- Google tag (gtag.js) – Consent Mode v2: lädt NICHT automatisch.
+     gtag.js wird erst nach aktiver Einwilligung im Cookie-Banner injiziert. -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  // Standard: alle nicht notwendigen Speicher verweigert (ePrivacy/DSGVO)
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'functionality_storage': 'granted',
+    'security_storage': 'granted'
+  });
   gtag('js', new Date());
-
-  gtag('config', 'G-DYG7EC9XKM');
 </script>
 
 <!-- ═══════════════════════════════════════════════
@@ -1284,12 +1291,12 @@ footer { background: var(--primary); padding: 64px 40px 32px; }
   <div class="cb-inner">
     <div class="cb-text">
       <p>
-        🍪 Diese Website verwendet keine Tracking-Cookies. Wir nutzen ausschließlich technisch notwendige Cookies sowie Google Fonts und Netlify Forms zur Funktionalität.
-        Weitere Infos in unserer <button onclick="openLegal('datenschutz')" style="background:none;border:none;padding:0;color:#F97316;text-decoration:underline;cursor:pointer;font-size:inherit">Datenschutzerklärung</button>.
+        🍪 Diese Website nutzt technisch notwendige Cookies und – nur mit Ihrer Einwilligung – Google Analytics (Statistik), um die Nutzung anonymisiert auszuwerten. Dabei werden Daten an Google in die USA übertragen. Sie können frei entscheiden und die Einwilligung jederzeit widerrufen.
+        Mehr in unserer <button onclick="openLegal('datenschutz')" style="background:none;border:none;padding:0;color:#F97316;text-decoration:underline;cursor:pointer;font-size:inherit">Datenschutzerklärung</button>.
       </p>
     </div>
     <div class="cb-actions">
-      <button class="cb-btn-accept" id="cb-accept" aria-label="Cookies akzeptieren">Verstanden</button>
+      <button class="cb-btn-accept" id="cb-accept" aria-label="Alle Cookies inkl. Statistik akzeptieren">Alle akzeptieren</button>
       <button class="cb-btn-decline" id="cb-decline" aria-label="Nur notwendige Cookies">Nur notwendige</button>
     </div>
   </div>
@@ -2126,9 +2133,12 @@ footer { background: var(--primary); padding: 64px 40px 32px; }
     <p>Diese Website enthält reine <strong>Hyperlinks</strong> zu Google Maps. Google Maps ist <strong>nicht eingebettet</strong> – beim Laden der Seite werden keinerlei Daten an Google übertragen. Erst beim aktiven Klick verlassen Sie unsere Website. Ab diesem Zeitpunkt gilt die Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></p>
 
     <h2>7. Cookies &amp; lokaler Speicher</h2>
-    <p>Diese Website setzt <strong>keine Tracking-, Marketing- oder Analyse-Cookies</strong>. Es wird lediglich ein localStorage-Eintrag (<code>bu_cookie_consent</code>) gespeichert, um Ihre Entscheidung im Cookie-Banner zu merken. <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO.</p>
+    <p>Technisch notwendig: Es wird ein localStorage-Eintrag (<code>bu_cookie_consent</code>) gespeichert, um Ihre Cookie-Entscheidung zu merken (<strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO). Statistik-Cookies (Google Analytics, siehe Punkt 8) werden <strong>ausschließlich nach Ihrer ausdrücklichen Einwilligung</strong> über den Cookie-Banner gesetzt (<strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO). Ohne Einwilligung werden keine Analyse- oder Marketing-Cookies geladen. Ihre Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen, indem Sie die Cookies bzw. den lokalen Speicher in Ihrem Browser löschen.</p>
 
-    <h2>8. Ihre Rechte (Art. 15–21 DSGVO)</h2>
+    <h2>8. Google Analytics (nur mit Einwilligung)</h2>
+    <p>Diese Website nutzt <strong>Google Analytics 4</strong>, einen Webanalysedienst der <strong>Google Ireland Limited</strong>, Gordon House, Barrow Street, Dublin 4, Irland. Google Analytics wird <strong>erst nach Ihrer aktiven Einwilligung</strong> über den Cookie-Banner geladen – vorher findet keine Verbindung zu Google statt und es werden keine Daten übertragen (umgesetzt über Google Consent Mode v2 mit Standardeinstellung „denied"). Nach erteilter Einwilligung werden Cookies (u. a. <code>_ga</code>, <code>_ga_*</code>) gesetzt und Nutzungsdaten mit <strong>aktivierter IP-Anonymisierung</strong> (<code>anonymize_ip</code>) ausgewertet. Dabei können Daten an Google-Server in die <strong>USA</strong> übertragen werden; Grundlage hierfür ist das EU-US Data Privacy Framework bzw. Standardvertragsklauseln (Art. 46 DSGVO). <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). <strong>Widerruf:</strong> jederzeit durch Löschen der Cookies/des lokalen Speichers. Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></p>
+
+    <h2>9. Ihre Rechte (Art. 15–21 DSGVO)</h2>
     <p>Sie haben das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Anfragen richten Sie bitte an: <a href="mailto:info@boese-unru.de">info@boese-unru.de</a></p>
     <p><strong>Zuständige Aufsichtsbehörde:</strong> Landesbeauftragte für Datenschutz und Informationsfreiheit NRW, Kavalleriestraße 2–4, 40213 Düsseldorf, <a href="https://www.ldi.nrw.de" target="_blank" rel="noopener noreferrer">www.ldi.nrw.de</a></p></div>
 </div>
@@ -2159,15 +2169,34 @@ footer { background: var(--primary); padding: 64px 40px 32px; }
 
 <script>
 
-/* ── Cookie Banner ── */
+/* ── Cookie Banner + Google Analytics (Consent Mode v2) ── */
 (function() {
   const banner  = document.getElementById('cookie-banner');
   const accept  = document.getElementById('cb-accept');
   const decline = document.getElementById('cb-decline');
   const COOKIE_KEY = 'bu_cookie_consent';
+  const GA_ID = 'G-DYG7EC9XKM';
 
-  // Banner nur zeigen wenn noch keine Entscheidung getroffen
-  if (!localStorage.getItem(COOKIE_KEY)) {
+  let gaLoaded = false;
+  function loadGA() {
+    if (gaLoaded) return;
+    gaLoaded = true;
+    // Einwilligung an Google signalisieren …
+    gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    // … und gtag.js erst jetzt nachladen
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    gtag('config', GA_ID, { 'anonymize_ip': true });
+  }
+
+  // Frühere Entscheidung respektieren
+  const stored = localStorage.getItem(COOKIE_KEY);
+  if (stored === 'accepted') {
+    loadGA();
+  } else if (!stored) {
+    // Banner nur zeigen, wenn noch keine Entscheidung getroffen wurde
     setTimeout(() => banner.classList.add('show'), 800);
   }
 
@@ -2176,7 +2205,7 @@ footer { background: var(--primary); padding: 64px 40px 32px; }
     localStorage.setItem(COOKIE_KEY, choice); // 'accepted' oder 'declined'
   }
 
-  accept.addEventListener('click',  () => dismissBanner('accepted'));
+  accept.addEventListener('click',  () => { loadGA(); dismissBanner('accepted'); });
   decline.addEventListener('click', () => dismissBanner('declined'));
 })();
 
