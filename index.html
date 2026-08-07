@@ -2283,6 +2283,50 @@ document.querySelectorAll('.faq-q-btn').forEach(btn => {
   }
 })();
 
+/* ── Telefon-Links am Desktop: keine tel:-Navigation (verhindert Weiterleitung
+      zu MSN/Skype/Bing, wenn keine Telefon-App vorhanden ist) → Nummer kopieren.
+      Auf Handys/Tablets bleibt tel: aktiv und öffnet den Dialer. ── */
+(function(){
+  // Nur echte Telefone (die wirklich wählen können) behalten das native tel:-Verhalten.
+  // Auf allen anderen Geräten (Desktop, Laptop, Touch-Laptop, Tablet) würde ein tel:-Klick
+  // ohne Telefon-App ungewollt weiterleiten (MSN/Skype/Bing) → dort stattdessen kopieren.
+  const isPhone = /iPhone|iPod|Android.*Mobile|Windows Phone|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent || '');
+  if (isPhone) return;
+
+  const toast = document.createElement('div');
+  toast.setAttribute('role', 'status');
+  toast.style.cssText = 'position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(12px);z-index:2000;background:#111827;color:#fff;padding:12px 18px;border-radius:10px;font-size:.9rem;font-weight:600;box-shadow:0 10px 30px rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;max-width:90vw;text-align:center;';
+  document.body.appendChild(toast);
+  let hideT;
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.style.opacity = '1';
+    toast.style.transform = 'translateX(-50%) translateY(0)';
+    clearTimeout(hideT);
+    hideT = setTimeout(() => {
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateX(-50%) translateY(12px)';
+    }, 2600);
+  }
+
+  document.querySelectorAll('a[href^="tel:"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const txt = (a.textContent || '').replace(/\s+/g, ' ').trim();
+      const num = /\d{4,}/.test(txt.replace(/\s/g, ''))
+        ? txt
+        : a.getAttribute('href').replace('tel:', '').replace(/^\+49/, '0');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(num)
+          .then(() => showToast('📋 Nummer kopiert: ' + num))
+          .catch(() => showToast('☎ Telefon: ' + num));
+      } else {
+        showToast('☎ Telefon: ' + num);
+      }
+    });
+  });
+})();
+
 /* ── Sticky call — mobile only ── */
 const stickyCall = document.getElementById('sticky-call');
 const checkSticky = () => { stickyCall.style.display = window.innerWidth <= 768 ? 'block' : 'none'; };
